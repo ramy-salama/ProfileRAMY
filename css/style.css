@@ -1,8 +1,26 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,regular,italic,600,600italic,700,700italic,800,800italic);
 
+/* :root{
+    --body:   #111;
+    --main:   #f9ca24;
+    --text:   #eee;
+    --heading:#fff;
+    --icon:   #000;
+    --box:    #333;
+    --header: #1a1a1a; 
+} */
+
 :root{
-    --yellow:#f9ca24;
+    --body:   #f6e6d6;
+    --main:   #E38528;
+    --text:   #333;
+    --heading:#000;
+    --icon:   #000;
+    --box:    #FFF;
+    --header: #e0c7ad; 
 }
+
+
 
 *{
     font-family: 'open sans', Arial, sans-serif ;
@@ -15,8 +33,8 @@
 }
 
 *::selection{
-    background:var(--yellow);
-    color:#333;
+    background:var(--main);
+    color:var(--box);
 }
 
 html{
@@ -29,15 +47,15 @@ html::-webkit-scrollbar{
 }
 
 html::-webkit-scrollbar-track{
-    background:#222;
+    background:var(--box);
 }
 
 html::-webkit-scrollbar-thumb{
-    background:var(--yellow);
+    background:var(--main);
 }
 
 body{
-    background:#111;
+    background:var(--body);
     overflow-x: hidden;
     padding-left: 35rem;
 }
@@ -50,8 +68,8 @@ section{
 
 .btn{
     padding:.7rem 3rem;
-    background:#333;
-    color:#fff;
+    background:var(--box);
+    color:var(--heading);
     cursor: pointer;
     margin-top: 1rem;
     font-size: 2rem;
@@ -64,7 +82,7 @@ section{
 }
 
 .btn:hover{
-    background:var(--yellow);
+    background:var(--main);
 }
 
 .heading{
@@ -72,12 +90,25 @@ section{
     margin:0 6rem;
     font-size: 4rem;
     padding:1rem;
-    border-bottom: .1rem solid #fff4;
-    color:#fff;
+    border-bottom: .1rem solid var(--heading);
+    color:var(--heading);
 }
 
 .heading span{
-    color:var(--yellow);
+    color:var(--main);
+}
+
+.haid, .show{
+    cursor: pointer;
+    max-width: 1px;
+    margin-top: 1rem;
+}
+
+.haid{
+    display: none;
+}
+.show { 
+    display: block;
 }
 
 header{
@@ -86,7 +117,7 @@ header{
     z-index: 1000;
     height:100%;
     width:35rem;
-    background:#1a1a1a;
+    background:var(--header);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -100,17 +131,17 @@ header .user img{
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 1rem;
-    border:.7rem solid var(--yellow);
+    border:.7rem solid var(--main);
 }
 
 header .user .name{
     font-size: 3.5rem;
-    color:#fff;
+    color:var(--heading);
 }
 
 header .user .post{
     font-size: 2rem;
-    color:#eee;
+    color:var(--text);
 }
 
 header .navbar{
@@ -127,19 +158,19 @@ header .navbar ul li a{
     display: block;
     padding:1rem;
     margin:1.5rem 0;
-    background:#333;
-    color:#fff;
+    background:var(--box);
+    color:var(--heading);
     font-size: 2rem;
     border-radius: 5rem;
 }
 
 header .navbar ul li a:hover{
-    background:var(--yellow);
+    background:var(--main);
 }
 
 header .follow a {
     font-size: 2.5rem;
-    color: #fff;
+    color: var(--heading);
     margin: .7rem;
 }
 
@@ -157,14 +188,14 @@ header .follow a:nth-child(4):hover {
 }
 header .follow a:nth-child(5):hover {
     color:#000;
-    background: #fff;
+    background:#fff;
 }
 
 #menu{
     position: fixed;
     top:2rem; right:2rem;
-    background:#333;
-    color:#fff;
+    background:var(--box);
+    color:var(--heading);
     cursor: pointer;
     font-size: 2.5rem;
     padding:1rem 1.5rem;
@@ -181,21 +212,21 @@ header .follow a:nth-child(5):hover {
 
 .home h3{
     font-size: 2.5rem;
-    color:#fff;
+    color:var(--heading);
 }
 
 .home h1{
     font-size:5rem;
-    color:#fff;
+    color:var(--heading);
 }
 
 .home h1 span{
-    color:var(--yellow);
+    color:var(--main);
 }
 
 .home p{
     font-size:2rem;
-    color:#eee;
+    color:var(--text);
     padding: 1rem 0;
 }
 
@@ -214,13 +245,13 @@ header .follow a:nth-child(5):hover {
 
 .about .row .info h3{
     font-size: 2rem;
-    color:var(--yellow);
+    color:var(--main);
     padding:1rem 0;
     font-weight: normal;
 }
 
 .about .row .info h3 span{
-    color:#eee;
+    color:var(--text);
     padding:0 .5rem;
 }
 
@@ -233,7 +264,7 @@ header .follow a:nth-child(5):hover {
 
 .about .row .counter .box{
     width:20rem;
-    background:#222;
+    background:var(--box);
     text-align: center;
     padding: 2rem;
     margin:2rem;
@@ -241,12 +272,12 @@ header .follow a:nth-child(5):hover {
 
 .about .row .counter .box span{
     font-size: 4rem;
-    color:var(--yellow);
+    color:var(--main);
 }
 
 .about .row .counter .box h3{
     font-size: 2rem;
-    color:#fff;
+    color:var(--heading);
 }
 
 .education .box-container{
@@ -262,27 +293,27 @@ header .follow a:nth-child(5):hover {
     width:27rem;
     margin:4rem 1rem;
     padding-left: 4rem;
-    border-left: .2rem solid #fff;
+    border-left: .2rem solid var(--heading);
     position: relative;
 }
 
 .education .box-container .box span{
     font-size: 1.3rem;
-    background:#222;
-    color:#fff;
+    background:var(--box);
+    color:var(--heading);
     border-radius: 5rem;
     padding:.5rem 2.5rem;
 }
 
 .education .box-container .box h3{
     font-size: 2rem;
-    color:#fff;
+    color:var(--heading);
     padding-top: 1.5rem;
 }
 
 .education .box-container .box p{
     font-size: 1.4rem;
-    color:#eee;
+    color:var(--text);
     padding: 1rem 0;
 }
 
@@ -295,8 +326,8 @@ header .follow a:nth-child(5):hover {
     line-height: 5rem;
     text-align: center;
     font-size: 2rem;
-    color:rgb(0, 0, 0);
-    background:var(--yellow);
+    color:var(--icon);
+    background:var(--main);
 }
 
 .portfolio .box-container{
@@ -317,7 +348,7 @@ header .follow a:nth-child(5):hover {
 }
 
 .portfolio .box-container .box img{
-    background: #fff;
+    background: var(--heading);
     height:100%;
     width:100%;
     object-fit: cover;
@@ -350,8 +381,8 @@ header .follow a:nth-child(5):hover {
 .contact .row form .box{
     padding:1.5rem;
     margin:1rem 0;
-    background:#3333;
-    color:#fff;
+    background:var(--box);
+    color:var(--heading);
     text-transform: none;
     font-size: 1.7rem;
     width:100%;
@@ -368,7 +399,7 @@ header .follow a:nth-child(5):hover {
 
 .contact .row .content .title{
     text-transform: uppercase;
-    color:#fff;
+    color:var(--heading);
     font-size: 3rem;
     padding-bottom: 2rem;
 }
@@ -377,26 +408,26 @@ header .follow a:nth-child(5):hover {
     display: flex;
     align-items: center;
     font-size: 2rem;
-    color:#eee;
+    color:var(--text);
     padding:1rem 0;
     font-weight: normal;
 }
 
 .contact .row .content .info h3 i{
     padding-right: 1rem;
-    color:var(--yellow);
+    color:var(--main);
 }
 
 .map {
     flex: 1 1 25rem;
-    border: 1rem solid rgba(255, 255, 255, 0.267);
+    border: 1rem solid var(--box);
     box-shadow: 0 .5rem 1rem rgba(88, 88, 88, 0.1);
     border-radius: .5rem;
     width: 100%;
 }
 
 .map:hover {
-    border: 1rem solid #fff;
+    border: 1rem solid var(--heading);
 }
 
 .top{
@@ -410,100 +441,64 @@ footer {
     font-size: 2rem;
     padding: 2.5rem;
     text-align: center;
-    color: #fff;
-    background: rgb(61, 58, 58);
+    color: var(--heading);
+    background:var(--box);
 }
 
 footer span {
-    color: var(--yellow);
+    color: var(--main);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* media queries  */
 
 @media (max-width:1200px){
-
     html{
         font-size: 55%;
     }
-
     .home{
         padding:1rem 4rem;
     }
-
 }
 
 @media (max-width:991px){
-
-   header{
-       left:-120%;
-   }
-
-   #menu{
-       display: block;
-   }
-
-   header.toggle{
-    left:0%;
-   }
-
-   body{
-       padding:0;
-   }
-
+    header{
+        left:-120%;
+    }
+    #menu{
+        display: block;
+    }
+    header.toggle{
+        left:0%;
+    }
+    body{
+        padding:0;
+    }
 }
 
 @media (max-width:768px){
-
     html{
         font-size: 50%;
     }
- 
- }
+}
 
 @media (max-width:400px){
-
     header{
         width: 100vw;
     }
-
     .heading{
         margin:0 3rem;
     }
-
     .about .row .counter .box{
         width: 100%;
     }
- 
     .education .box-container .box{
         width:100%;
     }
-
     .portfolio .box-container .box{
         width:100%;
     }
-
     .contact .row form{
         margin:3rem 0;
     }
-
- }
+}
