@@ -17,7 +17,7 @@
     --heading:#000;
     --icon:   #000;
     --box:    #FFF;
-    --header: #d8b692; 
+    --header: #dfbe9c; 
 }
 
 
@@ -102,6 +102,7 @@ section{
     cursor: pointer;
     max-width: 1px;
     margin-top: 1rem;
+    margin-left: 2rem;
 }
 
 .haid{
