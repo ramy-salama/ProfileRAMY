@@ -1,15 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,regular,italic,600,600italic,700,700italic,800,800italic);
 
-/* :root{
-    --body:   #111;
-    --main:   #f9ca24;
-    --text:   #eee;
-    --heading:#fff;
-    --icon:   #000;
-    --box:    #333;
-    --header: #1a1a1a; 
-} */
-
 :root{
     --body:   #ece4dc;
     --main:   #f0963d;
@@ -17,10 +7,8 @@
     --heading:#000;
     --icon:   #000;
     --box:    #FFF;
-    --header: #dfbe9c; 
+    --header: #d8b692; 
 }
-
-
 
 *{
     font-family: 'open sans', Arial, sans-serif ;
@@ -97,7 +85,7 @@ section{
 .heading span{
     color:var(--main);
 }
-
+/*---------------------------------------icon mode--------------------------------------*/
 .haid, .show{
     cursor: pointer;
     max-width: 1px;
@@ -111,7 +99,7 @@ section{
 .show { 
     display: block;
 }
-
+/*-----------------------------------------header---------------------------------------*/
 header{
     position: fixed;
     top:0; left:0;
@@ -203,7 +191,7 @@ header .follow a:nth-child(5):hover {
     z-index: 1000;
     display: none;
 }
-
+/*-----------------------------------------home----------------------------------------*/
 .home{
     display: flex;
     justify-content: center;
@@ -230,6 +218,7 @@ header .follow a:nth-child(5):hover {
     color:var(--text);
     padding: 1rem 0;
 }
+/*-----------------------------------------about----------------------------------------*/
 
 .about .row{
     display: flex;
@@ -280,6 +269,7 @@ header .follow a:nth-child(5):hover {
     font-size: 2rem;
     color:var(--heading);
 }
+/*---------------------------------------education----------------------------------*/
 
 .education .box-container{
     display: flex;
@@ -330,6 +320,7 @@ header .follow a:nth-child(5):hover {
     color:var(--icon);
     background:var(--main);
 }
+/*---------------------------------------portfolio----------------------------------*/
 
 .portfolio .box-container{
     display: flex;
@@ -358,6 +349,7 @@ header .follow a:nth-child(5):hover {
 .portfolio .box-container .box:hover img{
     transform: scale(1.2);
 }
+/*---------------------------------------contact----------------------------------*/
 
 .contact .row{
     display: flex;
@@ -418,6 +410,7 @@ header .follow a:nth-child(5):hover {
     padding-right: 1rem;
     color:var(--main);
 }
+/*---------------------------------------map----------------------------------*/
 
 .map {
     flex: 1 1 25rem;
@@ -430,13 +423,15 @@ header .follow a:nth-child(5):hover {
 .map:hover {
     border: 1rem solid var(--heading);
 }
-
+/*--------------------------------------scroll-top-------------------------------*/
 .top{
     position: fixed;
     bottom:7.5rem; right: 2rem;
     z-index: 100;
     display: none;
 }
+/*--------------------------------------footer-----------------------------------*/
+
 footer {
     margin-top: 2rem;
     font-size: 2rem;
@@ -450,8 +445,8 @@ footer span {
     color: var(--main);
 }
 
+/*--------------------------------------media queries------------------------------*/
 
-/* media queries  */
 
 @media (max-width:1200px){
     html{
