@@ -342,12 +342,12 @@ header .follow a:nth-child(5):hover {
 .portfolio .box-container .box img{
     background: var(--heading);
     height:100%;
-    width:100%;
-    object-fit: cover;
+    width:100%;   
 }
 
 .portfolio .box-container .box:hover img{
-    transform: scale(1.2);
+    transform: scale(.98);
+    border-radius: 1rem;
 }
 /*---------------------------------------contact----------------------------------*/
 
